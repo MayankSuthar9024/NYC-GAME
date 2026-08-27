@@ -71,7 +71,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: a3579605c2d54ff49a574d015ad22d31, type: 2}
     m_Threshold: 0.16666667
-    m_Position: {x: 0, y: 10}
+    m_Position: {x: 0, y: 7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Velocity Z
@@ -79,7 +79,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8266e5b4737cebb41b1701c7bce7b129, type: 2}
     m_Threshold: 0.33333334
-    m_Position: {x: -5, y: 0}
+    m_Position: {x: -3, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Velocity Z
@@ -95,7 +95,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 168cef1f7c5a10a4fb9697d8bf8984c2, type: 2}
     m_Threshold: 0.6666667
-    m_Position: {x: 5, y: 0}
+    m_Position: {x: 3, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Velocity Z
@@ -132,7 +132,7 @@ AnimatorStateMachine:
     m_Position: {x: -310, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4231857014832368550}
-    m_Position: {x: 140, y: 220, z: 0}
+    m_Position: {x: 140, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -172,6 +172,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: Velocity X
     m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: idle
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

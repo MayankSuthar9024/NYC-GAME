@@ -6,7 +6,7 @@ public class twoDAnimationStateController : MonoBehaviour
     Animator animator;
     float velocityX = 0.0f;
     float velocityZ = 0.0f;
-    public float acceleration = 0.0f;
+    public float acceleration;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +32,7 @@ public class twoDAnimationStateController : MonoBehaviour
         {
             velocityX += Time.deltaTime * acceleration;
         }
+        
         animator.SetFloat("Velocity Z", velocityZ);
         animator.SetFloat("Velocity X", velocityX);
     }
