@@ -11,7 +11,10 @@ A tactical deathmatch arena shooter where weapon attributes dynamically mutate o
 | Data System | ScriptableObjects for guns & modifiers |
 | Version Control | Git & GitHub |
 
-## 🤝 Contributing
+## Want to contibute in idea 
+Checkout the idea folder and add new file "Your Idea" lable, Write your idea in your file.
+
+## 🤝 Contributing 
 
 This is an **open-source community project**. Anyone can contribute:
 - 💡 **Gun ideas** → Open an issue with the `idea` label
