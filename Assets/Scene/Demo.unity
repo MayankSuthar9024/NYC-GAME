@@ -283,6 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c565cb998f2394645bbc746c0736076e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::twoDAnimationStateController
+  animator: {fileID: 0}
+  velocityX: 0
+  velocityZ: 0
   acceleration: 10
 --- !u!114 &171863880
 MonoBehaviour:
@@ -297,8 +300,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 5
-  jumpForce: 2
+  backwardSpeedMultiplier: 0.6
+  jumpForce: 1.5
+  gravity: -9.81
   controller: {fileID: 171863881}
+  animator: {fileID: 0}
+  animationDampTime: 0.1
+  maxVelocityZ: 7
+  maxBackwardVelocityZ: 5
+  maxVelocityX: 3
 --- !u!143 &171863881
 CharacterController:
   m_ObjectHideFlags: 0
@@ -418,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 526696607}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.5419537, z: -0, w: 0.8404084}
-  m_LocalPosition: {x: -13.11, y: 1, z: -18.98}
+  m_LocalPosition: {x: -13.11, y: 2.305, z: -18.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -493,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 171863882}
-  distanceFromPlayer: 0
+  cameraOffset: {x: 0, y: 1.6, z: 0}
   sensitivity: 2
   minY: -60
   maxY: 60
