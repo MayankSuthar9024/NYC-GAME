@@ -2,32 +2,56 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public float jumpForce;
+    [Header("Movement Options")]
+    public float speed = 5.0f;
+    public float jumpForce = 5.0f;
+    public float gravity = -9.81f;
     public CharacterController controller;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private float verticalVelocity = 0.0f;
+
     void Start()
     {
-        
+        if (controller == null)
+        {
+            controller = GetComponent<CharacterController>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float ZMovement  = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float XMovement  = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        Vector3 movement = new Vector3(XMovement, 0, ZMovement);
-        movement = movement.normalized * speed * Time.deltaTime;
+        if (controller == null) return;
 
-        if (controller.isGrounded && Input.GetButtonDown("Jump"))
+        float moveZ = Input.GetAxis("Vertical");
+        float moveX = Input.GetAxis("Horizontal");
+
+        // Calculate movement relative to character's local rotation (First-Person direction)
+        Vector3 moveDirection = (transform.right * moveX) + (transform.forward * moveZ);
+        if (moveDirection.magnitude > 1.0f)
         {
-            movement.y = jumpForce * Time.deltaTime;
+            moveDirection.Normalize();
+        }
+
+        // Handle grounded state, gravity, and jump physics
+        if (controller.isGrounded)
+        {
+            if (verticalVelocity < 0)
+            {
+                verticalVelocity = -2.0f; // Small constant downward force to stay grounded
+            }
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                verticalVelocity = Mathf.Sqrt(jumpForce * -2.0f * gravity);
+            }
         }
         else
         {
-            movement.y = -9.81f * Time.deltaTime;
+            verticalVelocity += gravity * Time.deltaTime;
         }
-        controller.Move(movement);
 
+        Vector3 finalVelocity = (moveDirection * speed) + (Vector3.up * verticalVelocity);
+        controller.Move(finalVelocity * Time.deltaTime);
     }
 }
+
