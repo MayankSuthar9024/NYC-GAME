@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PolygonBattleRoyale_FX_Dirt
+  m_Shader: {fileID: 4800000, guid: d97b2475e12b5c146a78083b2fdbff44, type: 3}
+  m_Parent: {fileID: 2100000, guid: df2523561c15ce04dbacf36bc857fcd1, type: 2}
+  m_ModifiedSerializedProperties: 2
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
+  - _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Gradient_Height: 1
+    - _Gradient_Offset: 1
+    - _Gradient_Opacity: 1
+    - _Gradient_Smoothness: 0.001
+    - _SpecularHighlights: 0
+    - _Zone_Fresnel: 1
+    - _Zone_Power: 1
+    - _Zone_Rim: 0.2
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 0.44117647, g: 0.40394938, b: 0.33737025, a: 1}
+    - _Zone_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
